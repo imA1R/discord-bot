@@ -36,18 +36,7 @@ client.on('message', msg => {
   if (msg.content.toLowerCase() === 'salak') {
     msg.channel.sendMessage('Adını Sormadım');
   }
-  if (message.content === prefix + 'reboot') {
-	  if (message.author.id === '351650610648580096') {
-		  message.channel.sendMessage('Bot Yeniden Başlatılıtor').then (msg => {
-			  console.log('Bot Yeniden Başlatılıtor');
-		  process.exit(0);
-		  });
-	  } else { 
-	  message.channeld.sendMessage('Buna Yetkin Yok ! ');
-	  
-	  }
-	  
-  }
+  
 		 
 });
 
