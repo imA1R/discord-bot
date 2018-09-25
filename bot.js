@@ -47,8 +47,8 @@ client.on("guildMemberAdd", member =>{
 	 if (!role) return ;
 	 
 	 member.addRole(role);
-	 channel.send(member + role + "rütbesini aldı !");
-	 member.send("Hey Aramıza Hoş Geldin Dostum ! İlk Rütbeni Aldın Gelişmeye bak...")
+	 channel.sendMessage(member + role + "rütbesini aldı !");
+	 member.sendMessage("Hey Aramıza Hoş Geldin Dostum ! İlk Rütbeni Aldın Gelişmeye bak...")
 	 
 	
 	
