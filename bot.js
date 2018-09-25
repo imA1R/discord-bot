@@ -39,17 +39,21 @@ client.on('message', msg => {
 	
 });
 
-client.on("guildMemberAdd", member =>{
-	 
-	 var.channel = member.guild.channels.find("name", "giriş-çıkış");
-	 if (!channel) return;
-	 var role = member.guild.roles.find("name", "New Member");
-	 if (!role) return ;
-	 
-	 member.addRole(role);
-	 channel.sendMessage(member + role + "rütbesini aldı !");
-	 member.sendMessage("Hey Aramıza Hoş Geldin Dostum ! İlk Rütbeni Aldın Gelişmeye bak...")
-	 
+client.on("guildMemberAdd", member => {
+
+var channel = member.guild.channels.find("name" , "giriş-çıkış");
+ if(!channel) return
+ 
+ var role = member.guild.roles.find(" name ", " New Nember ");
+ if(!role) return; 
+
+ member.addrole(role);
+ 
+ channel.send(member + " artık " + role + "Rolü İle Aramızda");
+ 
+ member.send("Aramıza Hosgeldin geldin! Artık @üye Rolüne Sahipsin!")
+ 
+});
  
 
   
