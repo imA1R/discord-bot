@@ -36,6 +36,23 @@ client.on('message', msg => {
   if (msg.content.toLowerCase() === 'salak') {
     msg.channel.sendMessage('Adını Sormadım');
   }
+	
+});
+
+client.on("guildMemberAdd", member =>{
+	 
+	 var.channel = member.guild.channels.find("name", "giriş-çıkış");
+	 if (!channel) return;
+	 var role = member.guild.roles.find("name", "New Member");
+	 if (!role) return ;
+	 
+	 member.addRole(role);
+	 channel.send(member + role + "rütbesini aldı !");
+	 member.send("Hey Aramıza Hoş Geldin Dostum ! İlk Rütbeni Aldın Gelişmeye bak...")
+	 
+	
+	
+ });
 
   
 		 
