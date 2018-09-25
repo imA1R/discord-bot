@@ -53,7 +53,7 @@ var channel = member.guild.channels.find('name' , 'giriş-çıkış');
  
  member.send('Aramıza Hosgeldin geldin! Artık @üye Rolüne Sahipsin!')
  
-});
+
  
 
   
