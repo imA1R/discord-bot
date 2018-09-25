@@ -52,7 +52,7 @@ client.on("guildMemberAdd", member =>{
 	 
 	
 	
- });
+ 
 
   
 		 
