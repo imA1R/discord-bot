@@ -1,0 +1,8 @@
+connection.playStream(myReadableStream);
+
+// If you don't want to use absolute paths, you can use
+// fs.createReadStream to circumvent it
+
+const fs = require('fs');
+const stream = fs.createReadStream('./test.mp3');
+connection.playStream(stream);
