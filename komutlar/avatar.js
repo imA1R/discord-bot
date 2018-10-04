@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-  if (message.content === prefix + 'avatar') {
+  if (message.sendMessage === prefix + 'avatar') {
     message.reply(message.author.avatarURL);
   }
   
