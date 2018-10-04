@@ -6,8 +6,8 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-  if (message.sendMessage === prefix + 'avatar') {
-    message.reply(message.author.avatarURL);
+  if (message.toLowerCase() === prefix + 'avatar') {
+    message.sendMessage(message.author.avatarURL);
   }
   
 });
