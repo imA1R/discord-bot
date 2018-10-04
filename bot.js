@@ -16,7 +16,7 @@ client.on('message', msg => {
   if (msg.content.toLowerCase() === 'selamün aleyküm') {
     msg.channel.sendMessage('Aleyküm Selam');
   }
-  if (msg.content.toLowerCase() === 'ping') {
+  if (msg.content.toLowerCase() === prefix + 'ping') {
     msg.channel.sendMessage('Kardeşim Ping ->' +  client.ping  + 'ms <-');
   }
   if (msg.content.toLowerCase() === 'ahmet') {
@@ -42,17 +42,19 @@ client.on('message', msg => {
 
 client.on('guildMemberAdd', member => {
 
-var channel = member.guild.channels.find('name' , 'giriş-çıkış');
+var channel = member.guild.channels.find('name' , 'welcome');
  if(!channel) return
  
- var role = member.guild.roles.find(' name ', ' New Nember ');
+ 
+ 
+ var role = member.guild.roles.find(' name ', ' New Member ');
  if(!role) return; 
 
  member.addrole(role);
  
  channel.send(member + ' artık ' + role + 'Rolü İle Aramızda');
  
- member.send('Aramıza Hosgeldin geldin! Artık @üye Rolüne Sahipsin!')
+ member.send('Aramıza Hosgeldin geldin! Artık Allah ın Bir  Rolüne Sahipsin!')
  
 
  
