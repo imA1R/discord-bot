@@ -38,25 +38,9 @@ client.on('message', msg => {
     msg.channel.sendMessage('Adını Sormadım');
   }
 	
-});
 
-client.on('guildMemberAdd', member => {
-
-var channel = member.guild.channels.find('name' , 'welcome');
- if(!channel) return
- 
- 
- 
- var role = member.guild.roles.find(' name ', ' New Member ');
- if(!role) return; 
-
- member.addrole(role);
- 
- channel.send(member + ' artık ' + role + 'Rolü İle Aramızda');
- 
- member.send('Aramıza Hosgeldin geldin! Artık Allah ın Bir  Rolüne Sahipsin!')
 	
-});
+
 
 
  
