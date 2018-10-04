@@ -12,4 +12,4 @@ message.reply(message.author.avatarURL);
   
 });
 
-client.login('your token here');
+client.login('process.env.BOT_TOKEN');
