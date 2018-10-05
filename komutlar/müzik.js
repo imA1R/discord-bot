@@ -6,12 +6,12 @@ client.login('process.env.BOT_TOKEN');
 client.on('message', message => {
   if (!message.guild) return;
   
-  if (message.toLowerCase() === prefix +'katıl') {
+  if (message.content.toLowerCase() === prefix +'katıl') {
     
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
         .then(connection => { 
-          message.sendMessage('Odaya geldim !');
+          message.channel.sendMessage('Odaya geldim !');
         })
         .catch(console.log);
     } else {
