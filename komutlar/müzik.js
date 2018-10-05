@@ -10,8 +10,8 @@ client.on('message', message => {
     
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
-        .then(connection => { // Connection is an instance of VoiceConnection
-          message.reply('I have successfully connected to the channel!');
+        .then(connection => { 
+          message.sendMessage('Odaya geldim !');
         })
         .catch(console.log);
     } else {
@@ -29,7 +29,7 @@ dispatcher.on('end', () => {
   
 });
 
-dispatcher.setVolume(0.5); // Set the volume to 50%
+dispatcher.setVolume(0.5); 
 dispatcher.setVolume(1);
 
 console.log(dispatcher.time);
