@@ -21,7 +21,7 @@ client.on('message', message => {
   
 });
 
-const dispatcher = connection.playFile('C:/Users/Discord/Desktop/myfile.mp3');
+const dispatcher = connection.playFile('http://youtube.com./sound.mp3');
 
 dispatcher.on('end', () => {
   
@@ -41,7 +41,7 @@ dispatcher.end();
 connection.playStream(myReadableStream);
 
 const fs = require('fs');
-const stream = fs.createReadStream('./test.mp3');
+const stream = fs.createReadStream('./youtube.mp3');
 connection.playStream(stream);
 
-connection.playArbitraryInput('http://mysite.com/sound.mp3');
+connection.playArbitraryInput('http://youtube.com/sound.mp3');
