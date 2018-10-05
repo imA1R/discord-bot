@@ -6,34 +6,28 @@ client.login('process.env.BOT_TOKEN');
 client.on('message', message => {
   if (!message.guild) return;
   
-  if (message.content.toLowerCase() === prefix +'katıl') {
-    
+  if (message.content === '/join') {
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
-        .then(connection => { 
-          message.channel.sendMessage('Odaya geldim !');
+      .then(connection => { 
+          message.reply('I have successfully connected to the channel!');
         })
         .catch(console.log);
     } else {
       message.reply('You need to join a voice channel first!');
     }
   }
-  
 });
-
-const dispatcher = connection.playFile('http://youtube.com./sound.mp3');
-
+const dispatcher = connection.playFile('C:/Users/Discord/Desktop/myfile.mp3');
 dispatcher.on('end', () => {
-  
+  });
+
+dispatcher.on('error', e => {
   console.log(e);
-  
 });
 
-dispatcher.setVolume(0.5); 
-dispatcher.setVolume(1);
-
+dispatcher.setVolume(0.5);
 console.log(dispatcher.time);
-
 dispatcher.pause();
 dispatcher.resume();
 dispatcher.end();
@@ -41,7 +35,7 @@ dispatcher.end();
 connection.playStream(myReadableStream);
 
 const fs = require('fs');
-const stream = fs.createReadStream('./youtube.mp3');
+const stream = fs.createReadStream('./test.mp3');
 connection.playStream(stream);
 
 connection.playArbitraryInput('http://youtube.com/sound.mp3');
