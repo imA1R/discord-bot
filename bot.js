@@ -16,11 +16,10 @@ client.on('message', msg => {
   if (msg.content.toLowerCase() === 'selamün aleyküm') {
     msg.channel.sendMessage('Aleyküm Selam');
   }
-  if (msg.content.toLowerCase() === prefix + 'ping') {
-    msg.channel.sendMessage('Kardeşim Ping ->' +  client.ping  + 'ms <-');
+  
   }
-  if (msg.content.toLowerCase() === 'ahmet') {
-    msg.channel.sendMessage('he');
+  if (msg.content.toLowerCase() === prefix + 'youtube') {
+    msg.channel.sendMessage('https://www.youtube.com/channel/UCtbbBe6GYgouA2E-eXa9ACg');
   }
   if (msg.content.toLowerCase() === 'piç') {
     msg.channel.sendMessage('Adını Sormadım');
@@ -37,8 +36,6 @@ client.on('message', msg => {
   if (msg.content.toLowerCase() === 'salak') {
     msg.channel.sendMessage('Adını Sormadım');
   }
-if (msg.content.toLowerCase() === prefix + 'youtube') {
-msg.channel.sendMessage('https://www.youtube.com/channel/UCtbbBe6GYgouA2E-eXa9ACg');
 		
 		
 
