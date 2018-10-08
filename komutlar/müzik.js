@@ -18,7 +18,7 @@ client.on('message', message => {
     }
   }
 });
-const dispatcher = connection.playFile('C:/Users/Discord/Desktop/myfile.mp3');
+const dispatcher = connection.playFile('C:/Users/Discord/Desktop.mp3');
 dispatcher.on('end', () => {
   });
 
