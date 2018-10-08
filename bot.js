@@ -4,11 +4,11 @@ const bot = new Discord.Client();
 
 const prefix = '*';
 
-bot.on('ready', () => {
+client.on('ready', () => {
   console.log('Bot Hazır!');
 });
 
-bot.on('message', message => {
+client.on('message', message => {
 
   if(message.author.bot) return;
   let command = message.content.split(" ")[0];
