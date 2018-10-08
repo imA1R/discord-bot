@@ -32,10 +32,8 @@ dispatcher.pause();
 dispatcher.resume();
 dispatcher.end();
 
-connection.playStream(myReadableStream);
-
 const fs = require('fs');
 const stream = fs.createReadStream('./test.mp3');
 connection.playStream(stream);
 
-connection.playArbitraryInput('http://youtube.com/sound.mp3');
+connection.playArbitraryInput('http://youtube.com.mp3');
