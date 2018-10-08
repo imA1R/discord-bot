@@ -38,7 +38,7 @@ client.on('message', msg => {
     msg.channel.sendMessage('Adını Sormadım');
   }
 if (msg.content.toLowerCase() === prefix + 'youtube') {
-msg.channel.sendMessage('https://www.youtube.com/channel/UCtbbBe6GYgouA2E-eXa9ACg'
+msg.channel.sendMessage('https://www.youtube.com/channel/UCtbbBe6GYgouA2E-eXa9ACg');
 		
 		
 
