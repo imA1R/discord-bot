@@ -15,8 +15,10 @@ client.on('message', msg => {
   }
   if (msg.content.toLowerCase() === 'selamün aleyküm') {
     msg.channel.sendMessage('Aleyküm Selam');
-	  
-  
+  }
+  if (msg.content.toLowerCase() === prefix + 'ekle') {
+    msg.channel.sendMessage('https://discordapp.com/oauth2/authorize?client_id=492414649044697108&scope=bot&permissions=0');
+	 
   }
   if (msg.content.toLowerCase() === prefix + 'youtube') {
     msg.channel.sendMessage('https://www.youtube.com/channel/UCtbbBe6GYgouA2E-eXa9ACg');
