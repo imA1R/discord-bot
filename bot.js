@@ -15,7 +15,7 @@ client.on('message', msg => {
   }
   if (msg.content.toLowerCase() === 'selamün aleyküm') {
     msg.channel.sendMessage('Aleyküm Selam');
-  }
+	  
   
   }
   if (msg.content.toLowerCase() === prefix + 'youtube') {
