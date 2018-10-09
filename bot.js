@@ -39,6 +39,12 @@ client.on('message', msg => {
     msg.channel.sendMessage('Adını Sormadım');
   }
 	
+   if(command === 'at'){
+    let adminRole = message.guild.roles.find('name', 'Admin');
+    if(message.mentions.users.size === 0){
+      return message.reply('Atmak istediğiniz kullanıcı adını yazınız.');
+
+	
 });
 		
 
