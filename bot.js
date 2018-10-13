@@ -384,7 +384,7 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === 'pezzevenk') {
    msg.delete(2)
-    msg.reply('Küfür EtmeKüfür Etme');
+    msg.reply('Küfür Etme');
   }
 });
 
@@ -482,7 +482,7 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === 'çüksüz') {
    msg.delete(2)
-    msg.reply('Küfür Etme'');
+    msg.reply('Küfür Etme');
   }
 });
 
@@ -629,7 +629,7 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === 'sikik') {
    msg.delete(2)
-    msg.reply('Küfür EtmeKüfür Etme);
+    msg.reply('Küfür Etme');
   }
 });
 
