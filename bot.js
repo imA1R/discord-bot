@@ -103,7 +103,7 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === 'sikerimha') {
    msg.delete(2)
-    msg.reply('Küfür Etme');'
+    msg.reply('Küfür Etme');
   }
 });
 
@@ -461,21 +461,21 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === 'g0tlek') {
    msg.delete(2)
-    msg.reply('Küfür Etme'');
+    msg.reply('Küfür Etme');
   }
 });
 
 client.on('message', msg => {
   if (msg.content === 'bacını') {
    msg.delete(2)
-    msg.reply('Küfür EtmeKüfür Etme'');
+    msg.reply('Küfür Etme');
   }
 });
 
 client.on('message', msg => {
   if (msg.content === 'bacını sikim') {
    msg.delete(2)
-    msg.reply('Küfür Etme'');
+    msg.reply('Küfür Etme');
   }
 });
 
