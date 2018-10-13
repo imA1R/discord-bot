@@ -1131,20 +1131,20 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if(msg.toLowerCase() === prefix +'sil') {
+  if(msg.content === prefix +'sil') {
    msg.sendMessage('50 veya 100');
   }
 });
 	  
 client.on('message', msg => {
-  if(msg.toLowerCase() === prefix +'sil 100') {
+  if(msg.content === prefix +'sil 100') {
    msg.delete(100)
     msg.sendMessage('100 msj temizlendi !');
   }
 });
 	  
 client.on('message', msg => {
-  if(msg.toLowerCase() === prefix +'sil 50') {
+  if(msg.content === prefix +'sil 50') {
    msg.delete(50)
     msg.sendMessage('50 msj temizlendi !');  
   }
