@@ -20,7 +20,7 @@ fs.readdir('./komutlar/', (err, files) => {
     log(`Yüklenen komut: ${props.help}.`);
     client.commands.set(props.help, props);
     props.conf.forEach(alias => {
-      client.set(, props.help);
+      client.set(props.help);
     });
   });
 });
