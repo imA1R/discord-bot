@@ -28,6 +28,16 @@ client.on("guildMemberAdd", member => {
 });
 
 client.on('message', msg => {
+  if (msg.content === prefix + 'ekle') {
+   msg.channel.sendMessage('https://discordapp.com/oauth2/authorize?client_id=492414649044697108&scope=bot&permissions=0')
+	  
+});
+ 
+
+
+
+
+client.on('message', msg => {
   if (msg.content === 'piç') {
    msg.delete(2)
     msg.reply('Küfür Etme');
