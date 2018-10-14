@@ -1153,8 +1153,8 @@ if (msg.content.toLowerCase() === prefix + 'temizle') {
 if (msg.content.toLowerCase() === prefix + 'yaz') {
     msg.delete();
     msg.channel.sendMessage(msg.content);
+  }
 	  
-
 	  
 
 
