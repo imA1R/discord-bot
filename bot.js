@@ -6,8 +6,8 @@ require('./util/eventLoader')(client);
 
 var prefix = ayarlar.prefix;
 
-const log = message => {
-  console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
 };
 
 client.commands = new Discord.Collection();
