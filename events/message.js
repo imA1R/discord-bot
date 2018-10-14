@@ -13,7 +13,6 @@ module.exports = message => {
   if (!message.content.startsWith(ayarlar.prefix)) return;
   let command = message.content.split(' ')[0].slice(ayarlar.prefix.length);
   let params = message.content.split(' ').slice(1);
-  let perms = client.elevation(message);
   let cmd;
 
   if (cmd) {
