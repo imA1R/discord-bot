@@ -18,9 +18,9 @@ fs.readdir('./komutlar/', (err, files) => {
   files.forEach(f => {
     let props = require(`./komutlar/${f}`);
     log(`Yüklenen komut: ${props.help}.`);
-    client.commands.set(props.help, props);
+    client.commands.set(props.help , props);
     props.conf.forEach(alias => {
-      client.set(props.help);
+      client.set(alias, props.help);
     });
   });
 });
@@ -31,12 +31,12 @@ client.reload = command => {
       delete require.cache[require.resolve(`./komutlar/${command}`)];
       let cmd = require(`./komutlar/${command}`);
       client.commands.delete(command);
-      client.aliases.forEach((cmd, alias) => {
+      client.forEach((cmd, alias) => {
         if (cmd === command) client.delete(alias);
       });
       client.commands.set(command, cmd);
-      cmd.conf.forEach( => {
-        client.set(cmd.help);
+      cmd.confforEach(alias => {
+        client.set(alias, cmd.help);
       });
       resolve();
     } catch (e){
@@ -51,7 +51,7 @@ client.load = command => {
       let cmd = require(`./komutlar/${command}`);
       client.commands.set(command, cmd);
       cmd.conf.forEach(alias => {
-        client.set(cmd.help);
+        client.set(alias, cmd.help.name);
       });
       resolve();
     } catch (e){
@@ -66,7 +66,7 @@ client.unload = command => {
       delete require.cache[require.resolve(`./komutlar/${command}`)];
       let cmd = require(`./komutlar/${command}`);
       client.commands.delete(command);
-      client.forEach((cmd, ) => {
+      client.aliases.forEach((cmd, alias) => {
         if (cmd === command) client.delete(alias);
       });
       resolve();
@@ -79,9 +79,9 @@ client.unload = command => {
 client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
 		if (!msg.guild.member(msg.author).hasPermission("BAN_MEMBERS")) {
-			msg.author.sendMessage('Aleyküm selam,  hoş geldin '); 
+			msg.author.sendMessage('Aleyküm selam,  hoş geldin ^^'); 
 		} else {
-		msg.reply('Aleyküm selam, hoş geldin ');
+		msg.reply('Aleyküm selam, hoş geldin ^^');
 		}
 	}
 });
@@ -106,4 +106,4 @@ client.on('error', e => {
   console.log(bgRed(e.replace(regToken, 'that was redacted')));
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login(ayarlar.token);
