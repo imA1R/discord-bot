@@ -32,9 +32,26 @@ client.on('message', msg => {
    msg.channel.sendMessage('https://discordapp.com/oauth2/authorize?client_id=492414649044697108&scope=bot&permissions=0')
   }	  
 });
- 
 
 
+exports.run = function(client, message) {
+
+};
+
+exports.conf = {
+  enabled: true, //komutut açtık
+  guildOnly: false, //sadece servere özel yapmadık
+  aliases: ['ping','p'], //farklı çağrılar ekledik
+  permLevel: 0 //kimlerin kullanabileceğini yazdık (bot.js dosyasında perm leveller yazıyor)
+};
+
+exports.help = {
+  name: 'ping', //adını belirledik (kullanmak için gereken komut)
+  description: 'Botun pingini gösterir', //açıklaması
+  usage: 'ping' //komutun kullanım şekli (mesela hava <bölge>)
+};
+
+});
 
 
 client.on('message', msg => {
