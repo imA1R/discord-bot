@@ -35,6 +35,8 @@ client.on('message', msg => {
 
 
 exports.run = function(client, message) {
+	
+   msg.channel.sendMessage("Ping **" + client.ping + "** ms");
 
 };
 
