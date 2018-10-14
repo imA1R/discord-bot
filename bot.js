@@ -30,7 +30,7 @@ client.on("guildMemberAdd", member => {
 client.on('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'ekle') {
    msg.channel.sendMessage('https://discordapp.com/oauth2/authorize?client_id=492414649044697108&scope=bot&permissions=0')
-	  
+  }	  
 });
  
 
