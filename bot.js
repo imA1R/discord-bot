@@ -1146,14 +1146,7 @@ client.on('message', msg => {
    msg.delete(2)
     msg.reply('Küfür Etme');
   }
-if (msg.content.toLowerCase() === prefix + 'temizle') {
-    msg.channel.bulkDelete(100);
-    msg.channel.sendMessage("100 adet mesaj silindi!");
-  }
-if (msg.content.toLowerCase() === prefix + 'yaz') {
-    msg.delete();
-    msg.channel.sendMessage(msg.content);
-  }
+
 	  
 	  
 
