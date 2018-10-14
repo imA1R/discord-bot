@@ -1140,7 +1140,7 @@ client.on('message', msg => {
     msg.reply('Küfür Etme');
   }
   if (msg.content.toLowerCase() === prefix + 'yaz') {
-    msg.delete();
+    msg.delete(2)
     msg.channel.sendMessage(msg.content);
   }
   if (msg.content === 'sikim kadar boyu') {
