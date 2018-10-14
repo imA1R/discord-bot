@@ -8,20 +8,19 @@ var prefix =ayarlar.prefix
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-
 client.on("guildMemberAdd", member => {
 	
 	var channel = member.guild.channels.find("name", "giriş-çıkış");
 	if (!channel) return;
 	
-	var role = member.guild.roles.find("name", "Yeni Üye");
+	var role = member.guild.roles.find("name", "Community");
 	if (!role) return;
 	
 	member.addRole(role); 
 	
 	channel.send(member + " artık " + role + " rolü ile aramızda");
 	
-	member.send("Aramıza hoş geldin! Artık @yeni üye rolüne sahipsin!")
+	member.send("Aramıza hoş geldin! Artık @Community rolüne sahipsin!")
 	
 });
 
