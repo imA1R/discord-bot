@@ -8,7 +8,7 @@ var prefix = ayarlar.prefix;
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-};
+
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
