@@ -36,7 +36,7 @@ client.reload = command => {
       });
       client.commands.set(command, cmd);
       cmd.conf.aliases.forEach(alias => {
-        client.aliases.set(alias, cmd.help.name);
+        client.aliases.set(alias, cmd.help);
       });
       resolve();
     } catch (e){
@@ -51,7 +51,7 @@ client.load = command => {
       let cmd = require(`./komutlar/${command}`);
       client.commands.set(command, cmd);
       cmd.conf.aliases.forEach(alias => {
-        client.aliases.set(alias, cmd.help.name);
+        client.aliases.set(alias, cmd.help);
       });
       resolve();
     } catch (e){
