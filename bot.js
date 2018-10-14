@@ -51,8 +51,8 @@ exports.help = {
   name: 'ping', //adını belirledik (kullanmak için gereken komut)
   description: 'Botun pingini gösterir', //açıklaması
   usage: 'ping' //komutun kullanım şekli (mesela hava <bölge>)
-
-});
+  }
+ 
 
 
 client.on('message', msg => {
