@@ -9,6 +9,18 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
+var channel = member.guild.channels.find("name", "giriş-çıkış");
+ if(!channel) return
+ 
+ var role = member.guild.roles.find("name", "üye");
+    if(!role) return; 
+
+ member.addrole(role);
+ channel.send(member + "artık" +role+ "Rolü İle Aramızda" );
+ member.send("Aramıza Hosgeldin geldin! Artık @üye Rolüne Sahipsin!")
+ 
+});
+
 client.on('message', msg => {
   if (msg.content === 'piç') {
    msg.delete(2)
