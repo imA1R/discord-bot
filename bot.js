@@ -1155,15 +1155,11 @@ client.on('message', msg => {
 });
 	  
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === prefix + 'temizle 100') {
+  if (msg.content.toLowerCase() === prefix + 'temizle') {
     msg.channel.bulkDelete(100);
     msg.channel.sendMessage("100 adet mesaj silindi!");
   }
 	  
-if (msg.content.toLowerCase() === prefix + 'temizle 50') {
-    msg.channel.bulkDelete(50);
-    msg.channel.sendMessage("50 adet mesaj silindi!");
-  }
 
 
 	   
