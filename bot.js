@@ -1139,11 +1139,12 @@ client.on('message', msg => {
    msg.delete(2)
     msg.reply('Küfür Etme');
   }
-});
-
-client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'yaz') {
+    msg.delete();
+    msg.channel.sendMessage(msg.content);
+  }
   if (msg.content === 'sikim kadar boyu') {
-   msg.delete(2)
+    msg.delete(2)
     msg.reply('Küfür Etme');
   }
 
