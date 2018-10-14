@@ -25,7 +25,7 @@ dispatcher.on('end', () => {
 dispatcher.on('error', e => {
   console.log(e);
 });
-
+setMaxListeners()
 dispatcher.setVolume(0.5);
 console.log(dispatcher.time);
 dispatcher.pause();
