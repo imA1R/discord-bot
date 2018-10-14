@@ -1152,13 +1152,8 @@ client.on('message', msg => {
   if(msg.content === prefix +'sil') {
    msg.reply('50 veya 100');
   }
-});
 	  
-client.on('message', msg => {
-  if (msg.content.toLowerCase() === prefix + 'temizle') {
-    msg.channel.bulkDelete(100);
-    msg.channel.sendMessage("100 adet mesaj silindi!");
-  }
+
 	  
 
 
