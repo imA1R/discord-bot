@@ -19,8 +19,8 @@ fs.readdir('./komutlar/', (err, files) => {
     let props = require(`./komutlar/${f}`);
     log(`Yüklenen komut: ${props.help}.`);
     client.commands.set(props.help, props);
-    props.conf.aliases.forEach(alias => {
-      client.aliases.set(alias, props.help);
+    props.conf.forEach(alias => {
+      client.set(, props.help);
     });
   });
 });
@@ -32,11 +32,11 @@ client.reload = command => {
       let cmd = require(`./komutlar/${command}`);
       client.commands.delete(command);
       client.aliases.forEach((cmd, alias) => {
-        if (cmd === command) client.aliases.delete(alias);
+        if (cmd === command) client.delete(alias);
       });
       client.commands.set(command, cmd);
-      cmd.conf.aliases.forEach(alias => {
-        client.aliases.set(alias, cmd.help);
+      cmd.conf.forEach( => {
+        client.set(cmd.help);
       });
       resolve();
     } catch (e){
@@ -50,8 +50,8 @@ client.load = command => {
     try {
       let cmd = require(`./komutlar/${command}`);
       client.commands.set(command, cmd);
-      cmd.conf.aliases.forEach(alias => {
-        client.aliases.set(alias, cmd.help);
+      cmd.conf.forEach(alias => {
+        client.set(cmd.help);
       });
       resolve();
     } catch (e){
@@ -66,8 +66,8 @@ client.unload = command => {
       delete require.cache[require.resolve(`./komutlar/${command}`)];
       let cmd = require(`./komutlar/${command}`);
       client.commands.delete(command);
-      client.aliases.forEach((cmd, alias) => {
-        if (cmd === command) client.aliases.delete(alias);
+      client.forEach((cmd, ) => {
+        if (cmd === command) client.delete(alias);
       });
       resolve();
     } catch (e){
