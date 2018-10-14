@@ -1139,9 +1139,9 @@ client.on('message', msg => {
    msg.delete(2)
     msg.reply('Küfür Etme');
   }
-  if (msg.content.toLowerCase() === prefix + 'yaz') {
+  if (msg.content === prefix + 'yaz') {
     msg.delete(2)
-    msg.channel.sendMessage(msg.content);
+    msg.reply(msg.content);
   }
   if (msg.content === 'sikim kadar boyu') {
     msg.delete(2)
