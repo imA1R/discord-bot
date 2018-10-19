@@ -1,19 +1,15 @@
 {
-  "name": "müzikbotu",
-  "version": "0.2.6",
-  "description": "müzik botu",
-  "main": "server.js",
+  "name": "eternal",
+  "version": "0.0.1",
+  "description": "",
+  "main": "bot.js",
   "scripts": {
-    "test": "node server.js",
-    "start": "node server.js"
+    "test": "node bot.js"
   },
-  "author": "Ahmet Arkıner",
-  "license": "MIT",
+  "author": "Ahmet",
+  "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2",
-    "ffmpeg-binaries": "^4.0.0",
-    "opusscript": "0.0.6",
-    "simple-youtube-api": "^5.0.2",
-    "ytdl-core": "^0.26.3"
+    "chalk": "^2.4.1",
+    "discord.js": "^11.4.2"
   }
 }
