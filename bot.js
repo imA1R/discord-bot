@@ -70,7 +70,9 @@ client.unload = command => {
       resolve();
     
       reject(e);
-
+	      
+ 
+});
 
 
 client.elevation = message => {
@@ -85,7 +87,7 @@ client.elevation = message => {
 
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 	    
-});
+
 
 
 
