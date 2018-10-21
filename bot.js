@@ -39,7 +39,7 @@ client.reload = command => {
       resolve();
       
       reject(e);
-    }
+    
   });
 };
 
