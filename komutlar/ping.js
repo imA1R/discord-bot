@@ -1,19 +1,43 @@
 const Discord = require('discord.js');
+const ayarlar = require('../ayarlar.json');
 
+var prefix = ayarlar.prefix;
 
-exports.run = function(client, message) {
-
-};
-
+exports.run = (client, message, params) => {
+  if (!params[0]) {
+    const commandNames = Array.from(client.commands.keys());
+    const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
+    message.channel.send({embed: {
+            color: 0xD97634,
+            author: {
+              name: "Ping Menüsü",
+              icon_url: "https://cdn.discordapp.com/attachments/487719679868272689/488331544587403274/image0.jpg"
+            },
+                "thumbnail": {
+                 "url": "https://cdn.discordapp.com/avatars/386421264409165829/08d0f8fb174dda6c6c01ce7d55bf0e76.png?size=2048"
+            },
+            title: "",
+            description: ` :ping_pong:  [Pong](DAVET LİNKİ) : **${Math.round(client.ping)}** ms \n  Pingim :joy:`,
+            fields: [
+            ],
+            timestamp: new Date(),
+            footer: {
+              icon_url: "",
+              text: "A1R"
+            }
+          }
+        });  
+        message.react("📝")
+}};
 exports.conf = {
-  enabled: true, //komutut açtık
-  guildOnly: false, //sadece servere özel yapmadık
-  aliases: ['ping','p'], //farklı çağrılar ekledik
-  permLevel: 0 //kimlerin kullanabileceğini yazdık (bot.js dosyasında perm leveller yazıyor)
+  enabled: true,
+  guildOnly: false,
+  aliases: ['p', 'pong', 'uptime',],
+  permLevel: 0
 };
 
 exports.help = {
-  name: 'ping', //adını belirledik (kullanmak için gereken komut)
-  description: 'Botun pingini gösterir', //açıklaması
-  usage: 'ping' //komutun kullanım şekli (mesela hava <bölge>)
+  name: 'ping',
+  description: 'Tüm komutları gösterir.',
+  usage: 'ping'
 };
