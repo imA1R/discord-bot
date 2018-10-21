@@ -41,7 +41,7 @@ client.reload = command => {
       reject(e);
     
   });
-};
+
 
 client.load = command => {
   return new Promise((resolve, reject) => {
