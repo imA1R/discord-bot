@@ -20,7 +20,7 @@ fs.readdir('./komutlar/', (err, files) => {
     let props = require(`./komutlar/${f}`);
     log(`Yüklenen komut: ${props.help}.`);
     client.commands.set(props.help, props);
-    props.conf.aliases.forEach(alias => {
+    props.conf.forEach(alias => {
       client.aliases.set(alias, props.help.name);
     });
   });
