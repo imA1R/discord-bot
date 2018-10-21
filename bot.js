@@ -37,7 +37,7 @@ client.reload = command => {
         client.aliases.set(alias, cmd.help.name);
    
       resolve();
-    } catch (e){
+      catch (e){
       reject(e);
     }
   });
