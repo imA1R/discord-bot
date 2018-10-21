@@ -52,7 +52,7 @@ client.load = command => {
         client.aliases.set(alias, cmd.help.name);
       
       resolve();
-    } catch (e){
+    
       reject(e);
     }
   });
@@ -66,9 +66,9 @@ client.unload = command => {
       client.commands.delete(command);
       client.aliases.forEach((cmd, alias) => {
         if (cmd === command) client.aliases.delete(alias);
-      });
+      
       resolve();
-    } catch (e){
+    
       reject(e);
     }
   });
