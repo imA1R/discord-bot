@@ -35,7 +35,7 @@ client.reload = command => {
       client.commands.set(command, cmd);
       cmd.conf.aliases.forEach(alias => {
         client.aliases.set(alias, cmd.help.name);
-      });
+   
       resolve();
     } catch (e){
       reject(e);
