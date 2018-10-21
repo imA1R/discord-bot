@@ -21,8 +21,6 @@ fs.readdir('./komutlar/', (err, files) => {
     log(`Yüklenen komut: ${props.help}.`);
     client.commands.set(props.help, props);
       client.aliases.set(alias, props.help.name);
-    });
-  });
 });
 
 client.reload = command => {
