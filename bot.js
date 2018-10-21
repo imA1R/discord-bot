@@ -54,7 +54,7 @@ client.load = command => {
       resolve();
     
       reject(e);
-    }
+    
   });
 };
 
