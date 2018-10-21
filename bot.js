@@ -70,12 +70,6 @@ client.unload = command => {
       resolve();
     
       reject(e);
-    
-  });
-
-
-
-
 
 
 
