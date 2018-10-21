@@ -76,21 +76,6 @@ client.unload = command => {
 
 
 
-client.on("guildMemberAdd", member => {
-	
-	var channel = member.guild.channels.find("name", "giriş-çıkış");
-	if (!channel) return;
-	
-	var role = member.guild.roles.find("name", "üye");
-	if (!role) return;
-	
-	member.addRole(role); 
-	
-	channel.send(member + " artık " + role + " rolü ile aramızda");
-	
-	member.send("Aramıza hoş geldin! Artık @üye rolüne sahipsin!")
-	
-});
 
 
 
@@ -109,6 +94,7 @@ var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 client.on('warn', e => {
   console.log(bgYellow(e.replace(regToken, 'that was redacted')));
 
+});
 
 client.on('error', e => {
   console.log(bgRed(e.replace(regToken, 'that was redacted')));
