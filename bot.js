@@ -56,7 +56,7 @@ client.load = command => {
       reject(e);
     
   });
-};
+
 
 client.unload = command => {
   return new Promise((resolve, reject) => {
@@ -70,9 +70,9 @@ client.unload = command => {
       resolve();
     
       reject(e);
-    }
+    
   });
-};
+
 
 client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
