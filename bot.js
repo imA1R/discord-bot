@@ -84,7 +84,7 @@ client.on('message', msg => {
 	}
 });
 
-////////////////////////
+
 
 client.on("guildMemberAdd", member => {
 	
@@ -102,7 +102,7 @@ client.on("guildMemberAdd", member => {
 	
 });
 
-////////////////////////
+
 
 client.elevation = message => {
   if(!message.guild) {
