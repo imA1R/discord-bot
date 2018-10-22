@@ -26,7 +26,7 @@ fs.readdir('./komutlar/', (err, files) => {
     });
   });
 });
-///////
+
 client.reload = command => {
   return new Promise((resolve, reject) => {
     try {
